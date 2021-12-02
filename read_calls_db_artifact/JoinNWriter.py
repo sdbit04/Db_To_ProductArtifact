@@ -197,7 +197,7 @@ class JoinNWriter(object):
 
     def print_updated_content_on_console(self):
         updated_content = self.populate_cell_name()
-        print("Number of rows in file = {}".format(len(updated_content.keys())))
+        # print("Number of rows in file = {}".format(len(updated_content.keys())))
         if len(updated_content.keys()) !=0:
             out_file_path = os.path.join(self.out_dir, self.input_file_name)
             with open(out_file_path, 'w', newline='') as out_file:
