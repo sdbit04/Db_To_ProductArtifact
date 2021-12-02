@@ -24,7 +24,7 @@ class JoinNWriter(object):
         cell_id_vs_name = self.cell_id_vs_cell_name
 
         for row_id, row_items in selected_columns_of_file.items():
-            pdb.set_trace()
+            # pdb.set_trace()
             try:
                 cell_id = row_items[2]
                 cell_p_name = None
@@ -46,13 +46,15 @@ class JoinNWriter(object):
                 row_items[2] = cell_p_name
             try:
                 cell_id = row_items[5]
-                try:
-                    cell_id = int(cell_id)
-                except (ValueError, TypeError):
-                    print("Exception while reading {}".format(self.input_file_path))
-                    break
-                else:
-                    cell_0_name = cell_id_vs_name[cell_id]
+                cell_0_name = None
+                if cell_id != '' and cell_id is not None:
+                    try:
+                        cell_id = int(cell_id)
+                    except (ValueError, TypeError):
+                        print("Exception while reading {}".format(self.input_file_path))
+                        break
+                    else:
+                        cell_0_name = cell_id_vs_name[cell_id]
             except KeyError:
                 pass
                 # print("Cell_id_missing in mentor")
@@ -60,13 +62,15 @@ class JoinNWriter(object):
                 row_items[5] = cell_0_name
             try:
                 cell_id = row_items[8]
-                try:
-                    cell_id = int(cell_id)
-                except (ValueError, TypeError):
-                    print("Exception while reading {}".format(self.input_file_path))
-                    break
-                else:
-                    cell_1_name = cell_id_vs_name[cell_id]
+                cell_1_name = None
+                if cell_id != '' and cell_id is not None:
+                    try:
+                        cell_id = int(cell_id)
+                    except (ValueError, TypeError):
+                        print("Exception while reading {}".format(self.input_file_path))
+                        break
+                    else:
+                        cell_1_name = cell_id_vs_name[cell_id]
             except KeyError:
                 pass
                 # print("Cell_id_missing in mentor")
@@ -74,13 +78,15 @@ class JoinNWriter(object):
                 row_items[8] = cell_1_name
             try:
                 cell_id = row_items[11]
-                try:
-                    cell_id = int(cell_id)
-                except (ValueError, TypeError):
-                    print("Exception while reading {}".format(self.input_file_path))
-                    break
-                else:
-                    cell_2_name = cell_id_vs_name[cell_id]
+                cell_2_name = None
+                if cell_id != '' and cell_id is not None:
+                    try:
+                        cell_id = int(cell_id)
+                    except (ValueError, TypeError):
+                        print("Exception while reading {}".format(self.input_file_path))
+                        break
+                    else:
+                        cell_2_name = cell_id_vs_name[cell_id]
             except KeyError:
                 pass
                 # print("Cell_id_missing in mentor")
@@ -88,13 +94,15 @@ class JoinNWriter(object):
                 row_items[11] = cell_2_name
             try:
                 cell_id = row_items[14]
-                try:
-                    cell_id = int(cell_id)
-                except (ValueError, TypeError):
-                    print("Exception while reading {}".format(self.input_file_path))
-                    break
-                else:
-                    cell_3_name = cell_id_vs_name[cell_id]
+                cell_3_name = None
+                if cell_id != '' and cell_id is not None:
+                    try:
+                        cell_id = int(cell_id)
+                    except (ValueError, TypeError):
+                        print("Exception while reading {}".format(self.input_file_path))
+                        break
+                    else:
+                        cell_3_name = cell_id_vs_name[cell_id]
             except KeyError:
                 pass
                 # print("Cell_id_missing in mentor")
@@ -102,13 +110,15 @@ class JoinNWriter(object):
                 row_items[14] = cell_3_name
             try:
                 cell_id = row_items[17]
-                try:
-                    cell_id = int(cell_id)
-                except (ValueError, TypeError):
-                    print("Exception while reading {}".format(self.input_file_path))
-                    break
-                else:
-                    cell_4_name = cell_id_vs_name[cell_id]
+                cell_4_name = None
+                if cell_id != '' and cell_id is not None:
+                    try:
+                        cell_id = int(cell_id)
+                    except (ValueError, TypeError):
+                        print("Exception while reading {}".format(self.input_file_path))
+                        break
+                    else:
+                        cell_4_name = cell_id_vs_name[cell_id]
             except KeyError:
                 pass
                 # print("Cell_id_missing in mentor")
@@ -117,13 +127,15 @@ class JoinNWriter(object):
 
             try:
                 cell_id = row_items[20]
-                try:
-                    cell_id = int(cell_id)
-                except (ValueError, TypeError):
-                    print("Exception while reading {}".format(self.input_file_path))
-                    break
-                else:
-                    cell_5_name = cell_id_vs_name[cell_id]
+                cell_5_name = None
+                if cell_id != '' and cell_id is not None:
+                    try:
+                        cell_id = int(cell_id)
+                    except (ValueError, TypeError):
+                        print("Exception while reading {}".format(self.input_file_path))
+                        break
+                    else:
+                        cell_5_name = cell_id_vs_name[cell_id]
             except KeyError:
                 pass
                 # print("Cell_id_missing in mentor")
@@ -132,13 +144,15 @@ class JoinNWriter(object):
 
             try:
                 cell_id = row_items[23]
-                try:
-                    cell_id = int(cell_id)
-                except (ValueError, TypeError):
-                    print("Exception while reading {}".format(self.input_file_path))
-                    break
-                else:
-                    cell_6_name = cell_id_vs_name[cell_id]
+                cell_6_name = None
+                if cell_id != '' and cell_id is not None:
+                    try:
+                        cell_id = int(cell_id)
+                    except (ValueError, TypeError):
+                        print("Exception while reading {}".format(self.input_file_path))
+                        break
+                    else:
+                        cell_6_name = cell_id_vs_name[cell_id]
             except KeyError:
                 pass
                 # print("Cell_id_missing in mentor")
@@ -147,13 +161,15 @@ class JoinNWriter(object):
 
             try:
                 cell_id = row_items[26]
-                try:
-                    cell_id = int(cell_id)
-                except (ValueError, TypeError):
-                    print("Exception while reading {}".format(self.input_file_path))
-                    break
-                else:
-                    cell_7_name = cell_id_vs_name[cell_id]
+                cell_7_name = None
+                if cell_id != '' and cell_id is not None:
+                    try:
+                        cell_id = int(cell_id)
+                    except (ValueError, TypeError):
+                        print("Exception while reading {}".format(self.input_file_path))
+                        break
+                    else:
+                        cell_7_name = cell_id_vs_name[cell_id]
             except KeyError:
                 pass
                 # print("Cell_id_missing in mentor")
@@ -162,13 +178,15 @@ class JoinNWriter(object):
 
             try:
                 cell_id = row_items[29]
-                try:
-                    cell_id = int(cell_id)
-                except (ValueError, TypeError):
-                    print("Exception while reading {}".format(self.input_file_path))
-                    break
-                else:
-                    cell_8_name = cell_id_vs_name[cell_id]
+                cell_8_name = None
+                if cell_id != '' and cell_id is not None:
+                    try:
+                        cell_id = int(cell_id)
+                    except (ValueError, TypeError):
+                        print("Exception while reading {}".format(self.input_file_path))
+                        break
+                    else:
+                        cell_8_name = cell_id_vs_name[cell_id]
             except KeyError:
                 pass
                 # print("Cell_id_missing in mentor")
