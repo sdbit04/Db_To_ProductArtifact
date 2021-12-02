@@ -36,7 +36,6 @@ class JoinNWriter(object):
                         break
                     else:
                         cell_p_name = cell_id_vs_name[cell_id]
-                        print(cell_p_name)
                 else:
                     pass
             except KeyError:
