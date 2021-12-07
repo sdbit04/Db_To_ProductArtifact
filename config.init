@@ -1,0 +1,12 @@
+calls_db_archive_dir=/home/oracle/Scripts/archive_data
+out_dir=/home/oracle/Scripts/out_dir
+history_dir=/home/oracle/Scripts/file_history
+keep_history_for_days=10
+back_days_min=2
+back_days_max=3
+ne_id_list=119,111
+mentor_db_user=mentor
+mentor_db_pass=Teopass123
+mentor_db_host=10.18.26.225
+mentor_db_service=MENTORDB
+
