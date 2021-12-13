@@ -4,7 +4,6 @@ import os
 import re
 import json
 import datetime
-import pdb
 
 
 def read_files_directory_keep_history(bdusr, bdpass, dbhost, dbport, dbservice, input_db_artifact_dir, out_directory, history_dir, history_days, ne_id_list, back_days_min, back_days_max):
@@ -42,7 +41,6 @@ def read_files_directory_keep_history(bdusr, bdpass, dbhost, dbport, dbservice, 
     """Create set of dates and NE we want to process """
     intended_dates_YYYYMMDD = set()
     for day in range(back_days_min, back_days_max+1):
-        pdb.set_trace()
         intended_dates_YYYYMMDD.add((datetime.datetime.today() - datetime.timedelta(days=day)).strftime("%Y%m%d"))
     intended_ne_id = set(ne_id_list)
 
@@ -51,7 +49,6 @@ def read_files_directory_keep_history(bdusr, bdpass, dbhost, dbport, dbservice, 
     dir_date_patt = re.compile("(2\d{7})")
     ne_id_patt = re.compile("2\d+_(\d+)$")
     for cur_dir, dirs, files in os.walk(input_db_artifact_dir):
-        pdb.set_trace()
         cur_dir_base = os.path.basename(cur_dir)
         try:
             cur_dir_date = dir_date_patt.search(cur_dir_base).group(1)

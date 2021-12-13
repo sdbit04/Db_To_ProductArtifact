@@ -2,3 +2,5 @@
 read_calls_db_artifact/__pycache__/
 read_calls_db_artifact/history.json
 *.zip
+read_calls_db_artifact/checking.py
+.venv

@@ -1,5 +1,4 @@
 import gzip
-import pdb
 
 
 class CallsDbArtReader(object):
@@ -15,7 +14,7 @@ class CallsDbArtReader(object):
 
                 row_num = 0
                 for line in input_zip_file.readlines():
-                    # pdb.set_trace()
+
                     line_items = line.decode().split(sep="\t")
                     # index of RECORD_TYPE = 7
                     if int(line_items[7]) == 0:
@@ -36,12 +35,4 @@ class CallsDbArtReader(object):
         return whole_files
 
 
-if __name__ == "__main__":
-    reader = CallsDbArtReader(r"D:\D_drive_BACKUP\MENTOR\Utility\CallsDbArtifact4Asset\Exception\10_2021112508_4_202112021315156364_calls0.txt.gz")
-    whole_file = reader.read_calls_db_artifact()
-    for row, line_items in whole_file.items():
-        try:
-            int(line_items[2])
-        except ValueError:
-            pdb.set_trace()
 
