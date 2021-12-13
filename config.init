@@ -7,6 +7,6 @@ back_days_max=3
 ne_id_list=119,111
 mentor_db_user=mentor
 mentor_db_pass=Teopass123
-mentor_db_host=10.18.26.225
+mentor_db_host=m-db-host-ip
 mentor_db_service=MENTORDB
 
